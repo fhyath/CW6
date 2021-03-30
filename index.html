@@ -8,25 +8,37 @@
 </head>
 <body>
     <h2>Question 1</h2>
-    <script>
-
-        function getFib(n){
-            let numbers = [];
-            for (i = 1; i <= n; i++) {
-                if(i===1){
-                    numbers.push(0);
+        <script>
+            function getFib(n){
+                let numbers = [];
+                for (i = 1; i <= n; i++) {
+                    if(i===1){
+                        numbers.push(0);
+                    }
+                    else if(i===2){
+                        numbers.push(1);
+                    }
+                    else {
+                    numbers.push(numbers[i-3] + numbers[i-2]);
+                    }
                 }
-                else if(i===2){
-                    numbers.push(1);
-                }
-                else {
-                   numbers.push(numbers[i-3] + numbers[i-2]);
-                }
+                    return numbers;
             }
-                return numbers;
-        }
-        document.write(getFib(10));
-    </script>
+            document.write(getFib(10));
+        </script>
+
+    <h2>Question 2</h2>
+        <script>
+            for(i=1; i<=5; i++){
+                for(y=0; y<i;y++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        </script>
+
+        
+
 
     
 </body>
