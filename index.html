@@ -50,6 +50,45 @@
         document.write("Array after sorting: " + sortArray(array));
     </script>
 
+    <h2>Question 4</h2>
+    <script>
+
+        function findMostFrequent(arr){
+            let map = new Map();
+
+            for(i=0; i<arr.length; i++){
+                if(map.has(arr[i])){
+                    map.set(arr[i], map.get(arr[i])+1);
+                }
+                else{
+                    map.set(arr[i],1);
+                }
+            }
+            console.log(map);
+            let maxValue = Number.MIN_VALUE;
+            for (let [key, value] of map) {
+                if(value > maxValue){
+                    maxValue = value;
+                }
+            }
+
+            var character;
+            var times;
+            for (let [key, value] of map) {
+                if(value === maxValue){
+                    character = key;
+                    times = value;
+                }
+            }
+            document.write(character + " (" + times + " times)");
+        }
+       
+        let arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        findMostFrequent(arr1);
+
+
+    </script>
+
 
         
 
