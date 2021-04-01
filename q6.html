@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor(bg, txt){
+            document.body.style.backgroundColor = bg;
+            document.body.style.color = txt;
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>This is some text</p>
+    <script>
+        let bgcolor = prompt("Type in desired background color");
+        let txtcolor = prompt("Type in desired text color");
+        changeColor(bgcolor, txtcolor);
+    </script>
+</body>
+</html>
